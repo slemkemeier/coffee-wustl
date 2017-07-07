@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head><title>COFFEE!</title>
+
+</head>
+<body>
+<div class="container-fluid">
+Search: <input ng-model="query" placeholder="See readme.md notes!">
+</div>
+<br>
+<div ui-grid="gridOptions" class="myGrid"></div>
+<br>
+<br>
+<div ng-controller='Carousel'>
+	<div style="heeght: 305px">
+		<div uib-carousel active="active" interval="5000" no-wrap: "noWrapSlides">
+			<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+				<img ng-src="{{slide.image}}" style="margin:auto;">
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
